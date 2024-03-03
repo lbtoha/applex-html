@@ -1,0 +1,13 @@
+/* menu start */
+.active-nav {
+  @apply relative text-primary before:absolute before:bottom-0 before:block before:h-px before:w-full before:bg-primary;
+}
+
+// selector styles
+.show {
+  @apply visible scale-100 opacity-100;
+}
+
+.hide {
+  @apply invisible scale-0 opacity-0;
+}
