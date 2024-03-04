@@ -11,3 +11,14 @@
 .hide {
   @apply invisible scale-0 opacity-0;
 }
+
+.banner-bg {
+  background-image: url(../images/home/banner-shape.png);
+}
+
+// slider styles
+.smooth .swiper-wrapper {
+  -webkit-transition-timing-function: linear !important;
+  -o-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+}
