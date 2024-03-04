@@ -63,25 +63,25 @@ input[type="number"]::-webkit-outer-spin-button {
   /*================ typography classes start ================ */
 
   .d1 {
-    @apply text-[36px] leading-[120%] sm:text-[48px] md:text-[56px] lg:text-[72px] xl:text-[80px] xxl:text-[100px];
+    @apply text-[56px] leading-[120%] md:text-[60px] lg:text-[72px] xl:text-[80px] xxl:text-[100px];
   }
   .d2 {
-    @apply text-[32px] leading-[120%]  sm:text-[40px] md:text-[50px] lg:text-[55px] xl:text-[60px] xxl:text-[72px];
+    @apply text-[40px] leading-[120%] md:text-[50px] lg:text-[55px] xl:text-[60px] xxl:text-[72px];
   }
   .d3 {
-    @apply text-[28px] leading-[120%]  sm:text-[36px] md:text-[44px] lg:text-[50px] xl:text-[55px] xxl:text-[64px];
+    @apply text-[36px] leading-[120%] md:text-[44px] lg:text-[50px] xl:text-[55px] xxl:text-[64px];
   }
   .d4 {
-    @apply text-[24px] leading-[120%]  sm:text-[32px] md:text-[40px] lg:text-[44px] xl:text-[50px] xxl:text-[56px];
+    @apply text-[32px] leading-[120%] md:text-[40px] lg:text-[44px] xl:text-[50px] xxl:text-[56px];
   }
   .h1 {
-    @apply text-[24px] leading-[120%] sm:text-[32px] md:text-[36px] lg:text-[40px] xxl:text-[48px];
+    @apply text-[32px] leading-[120%] md:text-[36px] lg:text-[40px] xxl:text-[48px];
   }
   .h2 {
-    @apply text-[36px] leading-[120%]  sm:text-[24px] md:text-[28px] lg:text-[32px] xl:text-[36px] xxl:text-[40px];
+    @apply text-[28px] leading-[120%] md:text-[32px] xl:text-[36px] xxl:text-[40px];
   }
   .h3 {
-    @apply text-[16px] leading-[120%] sm:text-[20px] md:text-[20px] lg:text-[24px] xl:text-[28px] xxl:text-[32px];
+    @apply text-[16px] leading-[120%] sm:text-[20px] md:text-[20px] lg:text-[24px] xl:text-[28px] xxl:text-[32px];       
   }
   .h4 {
     @apply text-[16px] leading-[130%] lg:text-[18px] xl:text-[20px] xxl:text-[24px];

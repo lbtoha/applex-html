@@ -174,15 +174,17 @@
           <div class="grid grid-flow-dense grid-cols-12 gap-6">
             <div class="col-start-1 col-end-13 space-y-6 4xl:col-end-9">
               <div
-                class="banner-bg spl60px grid grid-cols-2 items-center gap-2 rounded-3xl bg-accent-2 bg-right-top bg-no-repeat pr-8"
+                class="banner-bg spl60px grid-cols-2 flex-col-reverse items-center gap-2 rounded-3xl bg-accent-2 bg-right-top bg-no-repeat pr-8 max-lg:flex lg:grid"
               >
-                <div>
+                <div class="max-lg:spy80px">
                   <h1 class="d4 font-bold">THE NEXT - GEN FINANCE APP</h1>
                   <p class="m-text mt-3 text-black-4">
                     The Ultimate Finance App Cutting-Edge Features for
                     Next-Generation Management and Planning.
                   </p>
-                  <div class="spt40px flex items-center justify-between gap-6">
+                  <div
+                    class="spt40px flex justify-between gap-6 max-lg:flex-col lg:items-center"
+                  >
                     <p class="s-text text-black-4">sander@example.com</p>
                     <div class="btn-area z-20">
                       <a
@@ -210,7 +212,7 @@
                   <img
                     src="./images/home/banner-phone-ui.png"
                     alt="banner phone ui"
-                    class="pt-[90px]"
+                    class="pt-16 sm:pt-[90px]"
                   />
                 </div>
               </div>
@@ -298,25 +300,25 @@
 
             <!-- banner right side -->
             <div class="col-start-1 col-end-13 4xl:col-start-9">
-              <div class="grid max-4xl:grid-rows-2 h-full grid-cols-2 gap-6">
+              <div class="grid h-full grid-cols-2 gap-6 lg:max-4xl:grid-rows-2">
                 <div
-                  class="flex flex-col items-center justify-center rounded-xl bg-primary px-[78px] max-4xl:row-start-1 max-4xl:row-end-2 py-12 max-4xl:col-start-1  max-4xl:col-end-2"
+                  class="flex flex-col items-center justify-center rounded-xl bg-primary px-[78px] py-12 max-4xl:col-start-1 max-4xl:col-end-2 max-sm:col-end-3 lg:max-4xl:row-start-1 lg:max-4xl:row-end-2"
                 >
                   <p
-                    class="l-text capitalize text-white-1 max-4xl:row-start-1 max-4xl:row-end-2 max-4xl:col-start-1 max-4xl:col-end-2"
+                    class="l-text capitalize text-white-1 max-4xl:col-start-1 max-4xl:col-end-2 max-4xl:row-start-1 max-4xl:row-end-2"
                   >
                     Active user
                   </p>
                   <p class="h2 text-center font-bold text-white-1">17 K+</p>
                 </div>
                 <div
-                  class="flex flex-col items-center justify-center rounded-xl bg-secondary px-[78px] lg:max-4xl:row-start-2 max-4xl:row-end-2 py-12 max-lg:col-start-2 lg:max-4xl:col-start-1 max-4xl:col-end-2"
+                  class="flex flex-col items-center justify-center rounded-xl bg-secondary px-[78px] py-12 max-sm:col-start-1 max-sm:col-end-3 sm:max-4xl:col-end-2 sm:max-lg:col-start-2 lg:max-4xl:col-start-1 lg:max-4xl:row-start-2 lg:max-4xl:row-end-2"
                 >
                   <p class="l-text capitalize text-black-4">Stories</p>
                   <p class="h2 text-center font-bold text-black-4">4 K+</p>
                 </div>
                 <div
-                  class="lg:col-start-2 col-start-1 col-end-3 lg:max-4xl:row-start-1 max-4xl:row-end-3 overflow-hidden rounded-3xl bg-white-1 4xl:col-start-1"
+                  class="col-start-1 col-end-3 overflow-hidden rounded-3xl bg-white-1 lg:max-4xl:row-end-3 lg:col-start-2 lg:max-4xl:row-start-1 4xl:col-start-1"
                 >
                   <div
                     class="spy80px relative flex flex-col gap-5 rounded-full text-center"
