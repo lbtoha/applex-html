@@ -177,4 +177,76 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     },
   });
+
+  const textSlide = new Swiper(".text-slider", {
+    spaceBetween: 24,
+    speed: 6000,
+    loop: true,
+    autoplay: {
+      delay: 1,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".customerSliderNext",
+      prevEl: ".customerSliderPrev",
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 3,
+      },
+      1200: {
+        slidesPerView: 3,
+      },
+      1400: {
+        slidesPerView: 3.5,
+      },
+    },
+  });
+
+  // faq
+  let accordion = document.querySelectorAll(".faq-accordion");
+
+  accordion.forEach((item, index) => {
+    accordion[index].addEventListener("click", function () {
+      let faqAnswer = this.nextElementSibling;
+      let parent = accordion[index].parentElement;
+
+      // Close all other accordions
+      accordion.forEach((otherAccordion, otherIndex) => {
+        if (otherIndex !== index) {
+          let otherFaqAnswer = otherAccordion.nextElementSibling;
+          otherFaqAnswer.style.height = null;
+          otherAccordion.classList.remove("text-primary");
+          otherAccordion.classList.remove("pb-6");
+          otherAccordion.querySelector("i").classList.remove("ph-minus");
+          otherAccordion.querySelector("i").classList.add("ph-plus");
+          otherAccordion
+            .querySelector("div")
+            .classList.remove("border-primary");
+          otherAccordion.querySelector("div").classList.add("border-black-4");
+        }
+      });
+
+      // Toggle open/close for the clicked accordion
+      if (faqAnswer.style.height) {
+        faqAnswer.style.height = null;
+      } else {
+        faqAnswer.style.height = faqAnswer.scrollHeight + "px";
+      }
+
+      // Toggle classes for the clicked accordion
+      accordion[index].classList.toggle("text-primary");
+      accordion[index].classList.toggle("pb-6");
+      accordion[index].querySelector("i").classList.toggle("ph-plus");
+      accordion[index].querySelector("i").classList.toggle("ph-minus");
+      accordion[index].querySelector("div").classList.toggle("border-black-4");
+      accordion[index].querySelector("div").classList.toggle("border-primary");
+    });
+  });
 });

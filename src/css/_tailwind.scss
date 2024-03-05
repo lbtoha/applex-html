@@ -132,6 +132,9 @@ input[type="number"]::-webkit-outer-spin-button {
   .spb80px {
     @apply pb-10 md:pb-12 xl:pb-16 xxl:pb-20;
   }
+  .spl80px {
+    @apply ps-10 md:ps-12 xl:ps-16 xxl:ps-20;
+  }
   .spy80px {
     @apply py-10 md:py-12 xl:py-16 xxl:py-20;
   }

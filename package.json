@@ -1,6 +1,6 @@
 {
-  "name": "gulp-html-tailwind",  
-  "author": "Ibrahim kholil",  
+  "name": "gulp-html-tailwind",
+  "author": "Ibrahim kholil",
   "version": "1.0.0",
   "description": "A starter pack for html, tailwindcss, gulp and scss",
   "main": "gulpfile.js",

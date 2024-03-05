@@ -37,6 +37,7 @@ module.exports = {
           2: "#F2F6F6",
           3: "#B3B6B9",
           4: "#F6F9FF",
+          5: "#F8F8F8",
         },
         black: {
           1: "#000000",
@@ -46,6 +47,7 @@ module.exports = {
         },
       },
       screens: {
+        xs: "450px",
         sm: "576px",
         md: "768px",
         lg: "992px",

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Applex - HTML Tailwind css</title>
+  </head>
+
+  <body>
+    <main class="bg-white-4">
+      @@include('./partial/header.html')
+
+      <section class="spy120px">
+        <div class="container">
+          <div
+            class="mx-auto flex flex-col items-center justify-center gap-4 text-center"
+          >
+            <div class="flex items-center justify-center gap-3">
+              <i class="ph ph-fire text-[24px] text-primary"></i>
+              <h5 class="l-text font-medium text-primary">Choose Your Plan</h5>
+            </div>
+            <h3 class="h2 font-bold text-black-1">Flexible Pricing Options</h3>
+          </div>
+
+          <div class="spt60px"></div>
+        </div>
+      </section>
+
+      <!-- applex is available for all devices -->
+      @@include('./partial/footer.html')
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="./js/matter.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
