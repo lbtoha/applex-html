@@ -81,7 +81,7 @@ input[type="number"]::-webkit-outer-spin-button {
     @apply text-[28px] leading-[120%] md:text-[32px] xl:text-[36px] xxl:text-[40px];
   }
   .h3 {
-    @apply text-[16px] leading-[120%] sm:text-[20px] md:text-[20px] lg:text-[24px] xl:text-[28px] xxl:text-[32px];       
+    @apply text-[16px] leading-[120%] sm:text-[20px] md:text-[20px] lg:text-[24px] xl:text-[28px] xxl:text-[32px];
   }
   .h4 {
     @apply text-[16px] leading-[130%] lg:text-[18px] xl:text-[20px] xxl:text-[24px];
@@ -153,9 +153,19 @@ input[type="number"]::-webkit-outer-spin-button {
   .spr60px {
     @apply pr-8 md:pr-10 xl:pr-12 xxl:pr-15;
   }
+  .sp48px {
+    @apply p-6 md:p-8 xl:p-10 xxl:p-12;
+  }
+  .spt48px {
+    @apply pt-6 md:pt-8 xl:pt-10 xxl:pt-12;
+  }
+  .spb48px {
+    @apply pb-6 md:pb-8 xl:pb-10 xxl:pb-12;
+  }
   .sp40px {
     @apply p-5 md:p-6 xl:p-8 xxl:p-10;
   }
+
   .spx40px {
     @apply px-5 md:px-6 xl:px-8 xxl:px-10;
   }

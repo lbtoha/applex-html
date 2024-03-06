@@ -30,3 +30,13 @@
 .lock-bg {
   background-image: url(../images/home/lock.png);
 }
+
+.labels-wrap {
+  pointer-events: none;
+}
+
+.tags-container > canvas {
+  position: relative;
+  top: -1px;
+  left: -1px;
+}
