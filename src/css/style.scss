@@ -1,3 +1,42 @@
 @import "./tailwind";
 @import "./main";
 
+.marquee-section .marquee-wrap {
+  animation: marquee 20s linear infinite;
+  //   animation-direction: alternate-reverse;
+}
+
+.marquee-section-2 .marquee-wrap {
+  animation: marquee 15s linear infinite;
+  //   animation-direction: alternate-reverse;
+}
+
+.marquee-section-alt .marquee-wrap {
+  animation: marquee-alt 30s linear infinite;
+  //   animation-direction: alternate-reverse;
+}
+
+.marquee-section-alt-2 .marquee-wrap {
+  animation: marquee-alt 25s linear infinite;
+  //   animation-direction: alternate-reverse;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee-alt {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}

@@ -1,6 +1,5 @@
 "use strict";
 document.addEventListener("DOMContentLoaded", function () {
-  let scrollHeight;
   const scrollTopButton = document.querySelector(".scroll-top");
 
   const handleProgressClick = () => {
@@ -14,19 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     scrollTopButton.addEventListener("click", handleProgressClick);
 
   window.addEventListener("scroll", function () {
-    scrollHeight = window.scrollY;
-    const desktopNav = document.querySelector(".desktop-nav");
-    const loginButton = document.querySelector(".home-three-login");
-
-    if (scrollHeight > 50) {
-      desktopNav && desktopNav.classList.add("bg-neutral-n0");
-      loginButton && loginButton?.classList.remove("text-white-1");
-      loginButton && loginButton?.classList.add("text-neutral-n900");
-    } else {
-      loginButton && loginButton?.classList.remove("text-neutral-n900");
-      loginButton && loginButton?.classList.add("text-white-1");
-      desktopNav && desktopNav.classList.remove("bg-white-1");
-    }
+    let scrollHeight = window.scrollY;
 
     if (scrollHeight > 500) {
       scrollTopButton && scrollTopButton.classList.add("opacity-1");
@@ -51,19 +38,20 @@ document.addEventListener("DOMContentLoaded", function () {
     withoutSlash = currentUrl;
   }
 
+  console.log(withoutSlash);
+
   const singleMenu = document.querySelectorAll(".single-menu");
-  // Get all menu items
-  const menuItems = document.querySelectorAll(".menu li a");
 
   singleMenu &&
     singleMenu.forEach((item) => {
       const menuItemUrl = item.getAttribute("href");
-
+      console.log({ withoutSlash }, { menuItemUrl });
       if (withoutSlash === menuItemUrl) {
         item.classList.add("active-nav");
       }
     });
 
+  // move button
   document.querySelectorAll(".move-btn").forEach((btn) => {
     const oneItem = btn.querySelector(".one");
     const twoItem = btn.querySelector(".two");
@@ -81,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  //   dropdown
+  //dropdown
   // Reusable function for show/hide dropdown
   function toggleDropdown(btnId, dropdownId) {
     const dropdownBtn = document.getElementById(btnId);
@@ -117,34 +105,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Language switcher
   const mobileMenuBtn = document.getElementById("mobile-menu-btn");
   mobileMenuBtn &&
     mobileMenuBtn.addEventListener("click", () =>
       toggleDropdown("mobile-menu-btn", "mobile-menu")
     );
-
-  // let languageList;
-  // if (language) {
-  //   languageList = language.querySelectorAll("li");
-  // }
-
-  // if (languageList) {
-  //   languageList.forEach((item) => {
-  //     item.addEventListener("click", (event) => {
-  //       // Remove "active" class from all elements
-  //       languageList.forEach((otherItem) => {
-  //         otherItem.classList.remove("active");
-  //       });
-  //       // Add "active" class to the clicked element
-  //       item.classList.add("active");
-  //       // Close the dropdown
-  //       toggleDropdown("language-btn", "language");
-  //       // Prevent the click event from propagating to the document
-  //       event.stopPropagation();
-  //     });
-  //   });
-  // }
 
   // swiper js
   const ourTeam = new Swiper(".brand-slider", {

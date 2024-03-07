@@ -20,9 +20,12 @@
     <main class="bg-white-4">
       @@include('./partial/header.html')
 
+      <!-- blog details  -->
       <section class="spy120px">
         <div class="container">
-          <div class="sp40px rounded-[32px] border border-accent-2 bg-white-1">
+          <div
+            class="sm:sp40px rounded-[32px] border-accent-2 sm:border sm:bg-white-1"
+          >
             <div class="overflow-hidden rounded-3xl">
               <img
                 src="./images/home/blog-details-banner.png"
@@ -32,7 +35,7 @@
             </div>
             <div class="spt40px grid grid-cols-12 gap-6">
               <!-- right -->
-              <div class="col-start-1 col-end-9">
+              <div class="col-start-1 col-end-13 xl:col-end-9">
                 <div class="sp40px rounded-3xl border border-accent-2">
                   <p class="l-text text-black-4">
                     Latest News December 12, 2024
@@ -66,17 +69,21 @@
                   <h3 class="h3 spt40px font-bold text-black-1">
                     How to grow up your business
                   </h3>
-                  <div class="spt32px flex items-center gap-6">
-                    <img
-                      src="./images/home/blog-details-inner-1.png"
-                      alt="blog details inner image one"
-                      class="rounded-xl max-4xl:max-w-min"
-                    />
-                    <img
-                      src="./images/home/blog-details-inner-2.png"
-                      alt="blog details inner image two"
-                      class="rounded-xl shadow-sm"
-                    />
+                  <div class="spt32px flex items-center gap-6 max-sm:flex-col">
+                    <div>
+                      <img
+                        src="./images/home/blog-details-inner-1.png"
+                        alt="blog details inner image one"
+                        class="rounded-xl"
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src="./images/home/blog-details-inner-2.png"
+                        alt="blog details inner image two"
+                        class="rounded-xl"
+                      />
+                    </div>
                   </div>
                   <div class="spt40px">
                     <h4 class="h4 font-bold text-black-1">
@@ -106,7 +113,7 @@
                   </div>
                   <!-- author -->
                   <div
-                    class="smt40px sp40px flex items-center gap-3 rounded-3xl border border-accent-2"
+                    class="smt40px sp40px flex items-center gap-3 rounded-3xl border border-accent-2 max-md:flex-col"
                   >
                     <div>
                       <img
@@ -116,7 +123,9 @@
                       />
                     </div>
                     <div class="w-full">
-                      <div class="flex shrink-0 items-center justify-between">
+                      <div
+                        class="flex shrink-0 items-center justify-between gap-4 max-xs:flex-col"
+                      >
                         <div>
                           <h5 class="h5 font-bold text-black-1">
                             Sophie Moore
@@ -126,7 +135,7 @@
                         <div class="flex items-center gap-3">
                           <a
                             href="/"
-                            class="group theme-transition-3 flex size-12 items-center justify-center rounded-full border border-primary hover:bg-primary"
+                            class="group theme-transition-3 flex size-10 items-center justify-center rounded-full border border-primary hover:bg-primary sm:size-12"
                           >
                             <i
                               class="ph ph-facebook-logo theme-transition-3 shrink-0 text-[24px] text-primary group-hover:text-white-1"
@@ -134,7 +143,7 @@
                           </a>
                           <a
                             href="/"
-                            class="group theme-transition-3 flex size-12 items-center justify-center rounded-full border border-primary hover:bg-primary"
+                            class="group theme-transition-3 flex size-10 items-center justify-center rounded-full border border-primary hover:bg-primary sm:size-12"
                           >
                             <i
                               class="ph ph-instagram-logo theme-transition-3 shrink-0 text-[24px] text-primary group-hover:text-white-1"
@@ -142,7 +151,7 @@
                           </a>
                           <a
                             href="/"
-                            class="group theme-transition-3 flex size-12 items-center justify-center rounded-full border border-primary hover:bg-primary"
+                            class="group theme-transition-3 flex size-10 items-center justify-center rounded-full border border-primary hover:bg-primary sm:size-12"
                           >
                             <i
                               class="ph ph-twitch-logo theme-transition-3 shrink-0 text-[24px] text-primary group-hover:text-white-1"
@@ -165,12 +174,12 @@
                       <div class="grid grid-cols-2 gap-6">
                         <input
                           type="text"
-                          class="placeholder:m-text rounded-xl border border-accent-2 p-3 placeholder:text-black-4"
+                          class="placeholder:m-text rounded-xl border border-accent-2 p-3 placeholder:text-black-4 max-sm:col-span-2"
                           placeholder="Name"
                         />
                         <input
                           type="email"
-                          class="placeholder:m-text rounded-xl border border-accent-2 p-3 placeholder:text-black-4"
+                          class="placeholder:m-text rounded-xl border border-accent-2 p-3 placeholder:text-black-4 max-sm:col-span-2"
                           placeholder="Email"
                         />
 
@@ -191,9 +200,9 @@
                 </div>
               </div>
               <!-- left -->
-              <div class="col-start-9 col-end-13">
+              <div class="col-start-1 col-end-13 xl:col-start-9">
                 <div
-                  class="spt40px spx32px spb40px flex flex-col gap-10 rounded-3xl border border-accent-2"
+                  class="spt40px sm:spx32px spb40px flex flex-col gap-8 rounded-3xl border-accent-2 sm:gap-10 sm:border"
                 >
                   <!-- search box -->
                   <div class="rounded-xl border border-accent-2 p-5">
@@ -203,7 +212,7 @@
                       <input
                         type="text"
                         placeholder="Search"
-                        class="placeholder:m-text placeholder: to-black-4 placeholder:font-medium"
+                        class="placeholder:m-text placeholder: bg-inherit to-black-4 placeholder:font-medium"
                       />
                       <button
                         type="submit"
@@ -334,13 +343,184 @@
         </div>
       </section>
 
+      <!-- related blog -->
+      <section class="spb120px container">
+        <div class="flex items-center justify-between">
+          <div>
+            <div class="flex items-center gap-3">
+              <i class="ph ph-fire text-[24px] text-primary"></i>
+              <h5 class="l-text font-medium text-primary">
+                What Our Customers Say
+              </h5>
+            </div>
+            <h3 class="h2 pt-3 font-bold text-black-1">Hear from Our Users</h3>
+          </div>
+          <div class="btn-area z-20">
+            <a
+              href="#"
+              aria-label="Contact"
+              class="move-btn theme-transition-4 flex items-center text-center text-white-1"
+            >
+              <span
+                class="one m-text theme-transition-4 min-h-[45px] rounded-2xl bg-primary px-8 py-3 font-medium capitalize"
+              >
+                See all Blog
+              </span>
+              <span
+                class="two d-center theme-transition-4 flex min-h-[45px] shrink-0 items-center justify-center rounded-2xl border border-primary bg-primary p-2.5 text-center"
+              >
+                <i
+                  class="ph ph-arrow-up-right text-[24px]"
+                  data-icon-name="arrow-right"
+                ></i>
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="spt60px grid grid-cols-2 gap-6 xxl:grid-cols-3">
+          <!-- blog single card -->
+          <div class="group">
+            <div class="rounded-3xl border border-white-2 bg-white-1">
+              <div class="overflow-hidden rounded-xl p-3">
+                <img
+                  src="./images/home/blog-1.png"
+                  alt="blog thumb"
+                  class="rounded-xl"
+                />
+              </div>
+            </div>
+            <div
+              class="theme-transition-3 flex flex-col gap-3 rounded-3xl border border-white-2 bg-white-1 p-6 group-hover:bg-primary group-hover:text-white-1"
+            >
+              <a
+                href="/"
+                class="h4 theme-transition-3 font-bold text-black-1 group-hover:text-white-1"
+              >
+                Boosting Team Efficiency
+              </a>
+              <p
+                class="l-text theme-transition-3 text-black-4 group-hover:text-white-1"
+              >
+                Discover practical strategies for enhancing team efficiency with
+                AppleX
+              </p>
+              <div class="flex items-center justify-between gap-6">
+                <p
+                  class="m-text theme-transition-3 text-black-4 group-hover:text-white-1"
+                >
+                  Latest News December 12, 2024
+                </p>
+
+                <a
+                  href="/"
+                  class="theme-transition-3 flex size-10 items-center justify-center rounded-full bg-primary group-hover:bg-white-1"
+                >
+                  <i
+                    class="ph ph-arrow-up-right theme-transition-3 text-[24px] text-white-1 group-hover:text-black-1"
+                  >
+                  </i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- blog single card -->
+          <div class="group">
+            <div class="rounded-3xl border border-white-2 bg-white-1">
+              <div class="overflow-hidden rounded-xl p-3">
+                <img
+                  src="./images/home/blog-2.png"
+                  alt="blog thumb"
+                  class="rounded-xl"
+                />
+              </div>
+            </div>
+            <div
+              class="theme-transition-3 flex flex-col gap-3 rounded-3xl border border-white-2 bg-white-1 p-6 group-hover:bg-primary group-hover:text-white-1"
+            >
+              <a
+                href="/"
+                class="h4 theme-transition-3 font-bold text-black-1 group-hover:text-white-1"
+              >
+                Boosting Team Efficiency
+              </a>
+              <p
+                class="l-text theme-transition-3 text-black-4 group-hover:text-white-1"
+              >
+                Discover practical strategies for enhancing team efficiency with
+                AppleX
+              </p>
+              <div class="flex items-center justify-between gap-6">
+                <p
+                  class="m-text theme-transition-3 text-black-4 group-hover:text-white-1"
+                >
+                  Latest News December 12, 2024
+                </p>
+
+                <a
+                  href="/"
+                  class="theme-transition-3 flex size-10 items-center justify-center rounded-full bg-primary group-hover:bg-white-1"
+                >
+                  <i
+                    class="ph ph-arrow-up-right theme-transition-3 text-[24px] text-white-1 group-hover:text-black-1"
+                  >
+                  </i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- blog single card -->
+          <div class="group">
+            <div class="rounded-3xl border border-white-2 bg-white-1">
+              <div class="overflow-hidden rounded-xl p-3">
+                <img
+                  src="./images/home/blog-3.png"
+                  alt="blog thumb"
+                  class="rounded-xl"
+                />
+              </div>
+            </div>
+            <div
+              class="theme-transition-3 flex flex-col gap-3 rounded-3xl border border-white-2 bg-white-1 p-6 group-hover:bg-primary group-hover:text-white-1"
+            >
+              <a
+                href="/"
+                class="h4 theme-transition-3 font-bold text-black-1 group-hover:text-white-1"
+              >
+                Boosting Team Efficiency
+              </a>
+              <p
+                class="l-text theme-transition-3 text-black-4 group-hover:text-white-1"
+              >
+                Discover practical strategies for enhancing team efficiency with
+                AppleX
+              </p>
+              <div class="flex items-center justify-between gap-6">
+                <p
+                  class="m-text theme-transition-3 text-black-4 group-hover:text-white-1"
+                >
+                  Latest News December 12, 2024
+                </p>
+
+                <a
+                  href="/"
+                  class="theme-transition-3 flex size-10 items-center justify-center rounded-full bg-primary group-hover:bg-white-1"
+                >
+                  <i
+                    class="ph ph-arrow-up-right theme-transition-3 text-[24px] text-white-1 group-hover:text-black-1"
+                  >
+                  </i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- applex is available for all devices -->
       @@include('./partial/footer.html')
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <script src="./js/matter.js"></script>
 
     <script src="./js/main.js"></script>
   </body>
