@@ -1,7 +1,42 @@
+/* ==============
+ ========= js documentation ==========================
+
+ * theme name: Applex
+ * version: 1.0
+ * description: 
+ * author: Pixelaxis
+ * author-url: https://themeforest.net/user/pixelaxis
+
+    ==================================================
+
+     01. scroll to top button
+     -------------------------------------------------
+     02. menu
+     -------------------------------------------------
+     03. move button
+     -------------------------------------------------
+     04. Reusable function for show/hide dropdown
+     -------------------------------------------------
+     05. swiper js slider
+     -------------------------------------------------
+     06. faq
+     -------------------------------------------------
+     07. copy email address
+     -------------------------------------------------
+     08. pricing tab
+     -------------------------------------------------
+    ==================================================
+============== */
+
 "use strict";
 document.addEventListener("DOMContentLoaded", function () {
   const scrollTopButton = document.querySelector(".scroll-top");
 
+  /**
+   * ======================================
+   * 01. scroll to top button
+   * ======================================
+   */
   const handleProgressClick = () => {
     window.scrollTo({
       top: 0,
@@ -28,6 +63,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  /**
+   * ======================================
+   * 02. menu
+   * ======================================
+   */
+
   // Get the current page URL
   const currentUrl = window.location.pathname;
 
@@ -48,7 +89,12 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-  // move button
+  /**
+   * ======================================
+   * 03. move button
+   * ======================================
+   */
+
   document.querySelectorAll(".move-btn").forEach((btn) => {
     const oneItem = btn.querySelector(".one");
     const twoItem = btn.querySelector(".two");
@@ -66,8 +112,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  //dropdown
-  // Reusable function for show/hide dropdown
+  /**
+   * ======================================
+   * 04. Reusable function for show/hide dropdown
+   * ======================================
+   */
+
   function toggleDropdown(btnId, dropdownId) {
     const dropdownBtn = document.getElementById(btnId);
     const dropdown = document.getElementById(dropdownId);
@@ -108,7 +158,12 @@ document.addEventListener("DOMContentLoaded", function () {
       toggleDropdown("mobile-menu-btn", "mobile-menu")
     );
 
-  // swiper js slider
+  /**
+   * ======================================
+   * 05. swiper js slider
+   * ======================================
+   */
+
   const brandSlider = new Swiper(".brand-slider", {
     spaceBetween: 24,
     speed: 6000,
@@ -235,7 +290,12 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
-  // faq
+  /**
+   * ======================================
+   * 06. faq
+   * ======================================
+   */
+
   let accordion = document.querySelectorAll(".faq-accordion");
 
   accordion.forEach((item, index) => {
@@ -276,11 +336,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // copy text
+  /**
+   * ======================================
+   * 07. copy email address
+   * ======================================
+   */
+
   const emailField = document.querySelector(".copy-email");
-  emailField.onclick = function () {
-    document.execCommand("copy");
-  };
+
+  if (emailField) {
+    emailField.onclick = function () {
+      document.execCommand("copy");
+    };
+  }
 
   emailField &&
     emailField.addEventListener("copy", function (event) {
@@ -290,4 +358,87 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(event.clipboardData.getData("text"));
       }
     });
+
+  /**
+   * ======================================
+   * 08. pricing tab
+   * ======================================
+   */
+
+  const pricingButtons = document.querySelectorAll(".tab-links");
+
+  pricingButtons.forEach((pricingButton) => {
+    pricingButton.addEventListener("click", function () {
+      pricingButtons.forEach((button) => {
+        button.classList.remove("bg-accent-2");
+        button.classList.remove("border");
+      });
+
+      pricingButton.classList.add("bg-accent-2");
+      pricingButton.classList.add("border");
+    });
+  });
+
+  const monthlyButtons = document.querySelector(".button-monthly");
+  const yearlyButtons = document.querySelector(".button-yearly");
+  const priceOne = document.querySelector(".price-one");
+  const priceTwo = document.querySelector(".price-two");
+  const priceThree = document.querySelector(".price-three");
+
+  monthlyButtons &&
+    monthlyButtons.addEventListener("click", function () {
+      priceOne.innerHTML = 150;
+      priceTwo.innerHTML = 300;
+      priceThree.innerHTML = 475;
+    });
+
+  yearlyButtons &&
+    yearlyButtons.addEventListener("click", function () {
+      priceOne.innerHTML = 100;
+      priceTwo.innerHTML = 250;
+      priceThree.innerHTML = 350;
+    });
+
+  // pricing card check
+  const pricingCards = document.querySelectorAll(".pricing-card");
+
+  pricingCards &&
+    pricingCards.forEach((pricingCard) => {
+      pricingCard.addEventListener("click", function () {
+        pricingCards.forEach((card) => {
+          let checkbox = card.querySelector(".checkbox");
+          checkbox.classList.remove("bg-white-1");
+          // checkbox.classList.remove("text-primary");
+        });
+
+        let checkbox = pricingCard.querySelector(".checkbox");
+        checkbox.classList.add("bg-white-1");
+        checkbox.classList.add("text-white-3");
+      });
+    });
+
+  const tabButtons = document.querySelectorAll(".pricing-card");
+
+  tabButtons &&
+    tabButtons.forEach((tab) => {
+      tab.addEventListener("click", () => tabClicked(tab));
+    });
+
+  function tabClicked(tab) {
+    // tabButtons.forEach((tab) => {
+    //   tab.classList.remove("active");
+    // });
+    // tab.classList.add("active");
+
+    const contents = document.querySelectorAll(".tab-content");
+
+    contents.forEach((content) => {
+      content.classList.add("hidden");
+    });
+
+    const contentId = tab.getAttribute("content-id");
+    const contentSelected = document.getElementById(contentId);
+
+    contentSelected.classList.remove("hidden");
+  }
 });

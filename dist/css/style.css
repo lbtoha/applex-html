@@ -1,11 +1,27 @@
+/* ==============
+ ========= scss documentation ==========================
+
+ * theme name: Applex
+ * version: 1.0
+ * description: 
+ * author: Pixelaxis
+ * author-url: https://themeforest.net/user/pixelaxis
+
+    ==================================================
+
+     01. tailwind css
+     -------------------------------------------------
+     02. main
+     -------------------------------------------------
+
+    ==================================================
+============== */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
   --body-font: "Montserrat", sans-serif;
 }
 
-/*
-! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com
-*/
+/* ! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com */
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -710,6 +726,9 @@ button,
 .grid{
   display: grid;
 }
+.contents{
+  display: contents;
+}
 .hidden{
   display: none;
 }
@@ -998,10 +1017,6 @@ button,
 .border-accent-2\/40{
   border-color: rgb(211 224 255 / 0.4);
 }
-.border-black-1{
-  --tw-border-opacity: 1;
-  border-color: rgb(0 0 0 / var(--tw-border-opacity));
-}
 .border-black-4{
   --tw-border-opacity: 1;
   border-color: rgb(41 45 54 / var(--tw-border-opacity));
@@ -1020,6 +1035,9 @@ button,
 .border-white-2{
   --tw-border-opacity: 1;
   border-color: rgb(242 246 246 / var(--tw-border-opacity));
+}
+.border-white-3\/40{
+  border-color: rgb(179 182 185 / 0.4);
 }
 .bg-\[\#0E0D39\]{
   --tw-bg-opacity: 1;
@@ -2044,7 +2062,7 @@ input[type=number]::-webkit-outer-spin-button {
   width: 2px;
 }
 
-/* menu start */
+/* menu */
 .active-nav{
   position: relative;
   --tw-text-opacity: 1;

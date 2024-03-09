@@ -1,4 +1,4 @@
-/* menu start */
+/* menu */
 .active-nav {
   @apply relative text-primary before:absolute before:bottom-0 before:block before:h-px before:w-full before:bg-primary;
 }
@@ -38,4 +38,34 @@
 .tags-container > canvas {
   position: relative;
   transform: scale(1.001);
+}
+
+.marquee-section .marquee-wrap {
+  animation: marquee 20s linear infinite;
+  animation-direction: alternate-reverse;
+}
+
+.marquee-section-alt .marquee-wrap {
+  animation: marquee-alt 20s linear infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee-alt {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
 }
