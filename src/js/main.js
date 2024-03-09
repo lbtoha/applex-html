@@ -38,14 +38,11 @@ document.addEventListener("DOMContentLoaded", function () {
     withoutSlash = currentUrl;
   }
 
-  console.log(withoutSlash);
-
   const singleMenu = document.querySelectorAll(".single-menu");
 
   singleMenu &&
     singleMenu.forEach((item) => {
       const menuItemUrl = item.getAttribute("href");
-      console.log({ withoutSlash }, { menuItemUrl });
       if (withoutSlash === menuItemUrl) {
         item.classList.add("active-nav");
       }
@@ -111,8 +108,8 @@ document.addEventListener("DOMContentLoaded", function () {
       toggleDropdown("mobile-menu-btn", "mobile-menu")
     );
 
-  // swiper js
-  const ourTeam = new Swiper(".brand-slider", {
+  // swiper js slider
+  const brandSlider = new Swiper(".brand-slider", {
     spaceBetween: 24,
     speed: 6000,
     loop: true,
@@ -174,6 +171,70 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
+  const customerSlider = new Swiper(".customer-slider", {
+    spaceBetween: 24,
+    speed: 6000,
+    loop: true,
+    autoplay: {
+      delay: 1,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".customerSliderNext",
+      prevEl: ".customerSliderPrev",
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 3,
+      },
+      1200: {
+        slidesPerView: 3,
+      },
+      1400: {
+        slidesPerView: 4,
+      },
+    },
+  });
+
+  const customerSliderReverse = new Swiper(".customer-slider-reverse", {
+    spaceBetween: 24,
+    speed: 6000,
+    loop: true,
+
+    autoplay: {
+      delay: 1,
+      disableOnInteraction: false,
+      reverseDirection: true,
+    },
+    navigation: {
+      nextEl: ".customerSliderNext",
+      prevEl: ".customerSliderPrev",
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 3,
+      },
+      1200: {
+        slidesPerView: 3,
+      },
+      1400: {
+        slidesPerView: 4,
+      },
+    },
+  });
+
   // faq
   let accordion = document.querySelectorAll(".faq-accordion");
 
@@ -214,4 +275,19 @@ document.addEventListener("DOMContentLoaded", function () {
       accordion[index].querySelector("div").classList.toggle("border-primary");
     });
   });
+
+  // copy text
+  const emailField = document.querySelector(".copy-email");
+  emailField.onclick = function () {
+    document.execCommand("copy");
+  };
+
+  emailField &&
+    emailField.addEventListener("copy", function (event) {
+      event.preventDefault();
+      if (event.clipboardData) {
+        event.clipboardData.setData("text/plain", emailField.textContent);
+        console.log(event.clipboardData.getData("text"));
+      }
+    });
 });

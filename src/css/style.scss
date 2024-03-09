@@ -1,24 +1,15 @@
 @import "./tailwind";
 @import "./main";
+@import "./matterjs";
 
 .marquee-section .marquee-wrap {
   animation: marquee 20s linear infinite;
-  //   animation-direction: alternate-reverse;
-}
-
-.marquee-section-2 .marquee-wrap {
-  animation: marquee 15s linear infinite;
-  //   animation-direction: alternate-reverse;
+  animation-direction: alternate-reverse;
 }
 
 .marquee-section-alt .marquee-wrap {
-  animation: marquee-alt 30s linear infinite;
-  //   animation-direction: alternate-reverse;
-}
-
-.marquee-section-alt-2 .marquee-wrap {
-  animation: marquee-alt 25s linear infinite;
-  //   animation-direction: alternate-reverse;
+  animation: marquee-alt 20s linear infinite;
+  animation-direction: alternate-reverse;
 }
 
 @keyframes marquee {

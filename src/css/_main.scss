@@ -37,6 +37,5 @@
 
 .tags-container > canvas {
   position: relative;
-  top: -1px;
-  left: -1px;
+  transform: scale(1.001);
 }
