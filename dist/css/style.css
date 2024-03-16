@@ -968,6 +968,10 @@ button,
 .rounded-xl{
   border-radius: 0.75rem;
 }
+.rounded-b{
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
 .rounded-bl-full{
   border-bottom-left-radius: 9999px;
 }
@@ -985,6 +989,9 @@ button,
 }
 .rounded-tr-xl{
   border-top-right-radius: 0.75rem;
+}
+.rounded-br{
+  border-bottom-right-radius: 0.25rem;
 }
 .border{
   border-width: 1px;
@@ -2519,11 +2526,11 @@ input[type=number]::-webkit-outer-spin-button {
   .max-3xl\:w-40{
     width: 10rem;
   }
+  .max-3xl\:rounded-bl-xl{
+    border-bottom-left-radius: 0.75rem;
+  }
 }
 @media not all and (min-width: 1400px){
-  .max-xxl\:w-96{
-    width: 24rem;
-  }
   .max-xxl\:items-center{
     align-items: center;
   }
@@ -2571,9 +2578,6 @@ input[type=number]::-webkit-outer-spin-button {
 @media not all and (min-width: 1200px){
   .max-xl\:flex{
     display: flex;
-  }
-  .max-xl\:w-72{
-    width: 18rem;
   }
 }
 @media not all and (min-width: 992px){
@@ -3055,6 +3059,9 @@ input[type=number]::-webkit-outer-spin-button {
   }
   .\33xl\:h-full{
     height: 100%;
+  }
+  .\33xl\:rounded-tr-xl{
+    border-top-right-radius: 0.75rem;
   }
   .\33xl\:pb-\[174px\]{
     padding-bottom: 174px;

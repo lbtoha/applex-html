@@ -199,6 +199,7 @@ document.addEventListener("DOMContentLoaded", function () {
     spaceBetween: 24,
     speed: 6000,
     loop: true,
+    // mousewheel: true,
     autoplay: {
       delay: 1,
       disableOnInteraction: false,
@@ -223,6 +224,30 @@ document.addEventListener("DOMContentLoaded", function () {
       1400: {
         slidesPerView: 3.5,
       },
+    },
+  });
+
+  const mobileUiSlider = new Swiper(".mobile-ui-slider", {
+    spaceBetween: 24,
+    speed: 1400,
+    loop: false,
+    slidesPerView: 1,
+    centeredSlides: true,
+    // autoplay: {
+    //   delay: 2500,
+    //   disableOnInteraction: false,
+    // },
+    mousewheel: true,
+    pagination: {
+      el: ".swiper-pagination",
+      type: "bullets",
+      bulletClass: "swiper-custom-bullet",
+      bulletActiveClass: "swiper-custom-bullet-active",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".customerSliderNext",
+      prevEl: ".customerSliderPrev",
     },
   });
 
